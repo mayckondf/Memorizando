@@ -5,6 +5,17 @@
     "REGION_MASK": "pt-BR",
     "HOME": {
       "WELCOME": "Bem-vindo"
+    },
+    "DIFFICULT": {
+      "LOW": "Fácil",
+      "MEDIUM": "Médio",
+      "HARD": "Difícil"
+    },
+    "DIFFICULTY_CARD": {
+      "DESCRIPTION": "Dificuldade:"
+    },
+    "SCOREBOARD": {
+      "SCORE": "jogadas"
     }
   }
 }

@@ -5,6 +5,10 @@ export const common = {
 
   white: '#FFFFFF',
   black: '#000000',
+
+  podium1: '#ECB01C',
+  podium2: '#D4590B',
+  podium3: '#169F9E',
 };
 
 export const lightTheme = {
@@ -25,8 +29,8 @@ export const lightTheme = {
   textPrimary2: '#939393',
   textPrimary3: '#AAAAAA',
 
-  gradient1: '#00FBFE',
-  gradient2: '#006FFF',
+  gradient1: '#33C0F6',
+  gradient2: '#6122C8',
 };
 
 export const darkTheme = {

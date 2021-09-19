@@ -1,6 +1,6 @@
-import { ThemeProvider } from '@react-navigation/native';
 import React from 'react';
 import { useColorScheme } from 'react-native';
+import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './theme';
 
 const GlobalStyle = (props) => {

@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { difficulties } from '~/enum/difficulty';
 
 const initialState = {
-  low: [],
-  medium: [],
-  high: [],
+  [difficulties.LOW]: [],
+  [difficulties.MEDIUM]: [],
+  [difficulties.HARD]: [],
 };
 
 const scoreboard = createSlice({
