@@ -2,18 +2,14 @@
   "cSpell.words": [
     "Memorizando"
   ],
+  "i18n-ally.dirStructure": "auto",
+  "i18n-ally.sourceLanguage": "pt-BR",
+  "i18n-ally.displayLanguage": "pt-BR",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.namespace": true,
+  "i18n-ally.defaultNamespace": "translation",
   "i18n-ally.localesPaths": [
-    "src/lang",
-    "src/lang/locales",
-    "ios/Pods/Flipper-Boost-iOSX/boost/locale",
-    "ios/Pods/Flipper-Folly/folly/lang",
-    "ios/Pods/RCT-Folly/folly/lang",
-    "ios/Pods/boost-for-react-native/boost/locale",
-    "ios/Pods/Flipper-Boost-iOSX/boost/predef/language",
-    "ios/Pods/boost-for-react-native/boost/predef/language",
-    "ios/Pods/Headers/Private/Flipper-Folly/folly/lang",
-    "ios/Pods/Headers/Private/RCT-Folly/folly/lang",
-    "ios/Pods/Headers/Public/Flipper-Folly/folly/lang",
-    "ios/Pods/Headers/Public/RCT-Folly/folly/lang"
-  ]
+    "src/lang/locales"
+  ],
+  "cSpell.language": "en,pt,pt_BR",
 }

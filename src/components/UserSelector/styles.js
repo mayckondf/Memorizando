@@ -17,5 +17,5 @@ export const ShowUsersButton = styled.View`
   border-radius: 48px;
   justify-content: center;
   align-items: center;
-  padding-top: 4;
+  padding-top: 4px;
 `;

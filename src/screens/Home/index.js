@@ -8,25 +8,25 @@ const Home = () => {
   const { t } = useTranslation();
   const navigation = useNavigation();
 
-  const goToGame = (difficult) => {
-    navigation.navigate('Game', { difficult });
+  const goToGame = (difficulty) => {
+    navigation.navigate('Game', { difficulty });
   };
 
   const difficultyOptions = [
     {
       text: t(`DIFFICULT.${difficulties.LOW}`),
       difficult: difficulties.LOW,
-      onPress: goToGame,
+      onPress: () => goToGame(difficulties.LOW),
     },
     {
       text: t(`DIFFICULT.${difficulties.MEDIUM}`),
       difficult: difficulties.MEDIUM,
-      onPress: goToGame,
+      onPress: () => goToGame(difficulties.MEDIUM),
     },
     {
       text: t(`DIFFICULT.${difficulties.HARD}`),
       difficult: difficulties.HARD,
-      onPress: goToGame,
+      onPress: () => goToGame(difficulties.HARD),
     },
   ];
 

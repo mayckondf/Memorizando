@@ -4,6 +4,11 @@ export const fontGuides = {
     fontFamily: 'Lato-Bold',
     weight: '700',
   },
+  headerTitle: {
+    size: 22,
+    fontFamily: 'Lato-Black',
+    weight: '900',
+  },
   cardDescription: {
     size: 12,
     fontFamily: 'Lato',

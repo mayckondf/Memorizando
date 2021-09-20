@@ -9,7 +9,7 @@ const DifficultyCard = ({ item }) => {
   const { t } = useTranslation();
 
   return (
-    <Container>
+    <Container onPress={item.onPress}>
       <CardInfo>
         <MemoText guide="cardDescription" color="secondary1">
           {t('DIFFICULTY_CARD.DESCRIPTION')}
@@ -24,6 +24,7 @@ const DifficultyCard = ({ item }) => {
 DifficultyCard.propTypes = {
   item: PropTypes.shape({
     text: PropTypes.string,
+    onPress: PropTypes.func,
   }).isRequired,
 };
 
