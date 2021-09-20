@@ -16,6 +16,12 @@
     },
     "SCOREBOARD": {
       "SCORE": "jogadas"
+    },
+    "GAME": {
+      "PLAYS": "jogadas",
+      "WINNER": "Parabéns voce ganhou em {{plays}} jogadas!",
+      "PLAY_AGAIN": "Jogar Novamente",
+      "BACK_HOME": "Voltar Para Home"
     }
   }
 }

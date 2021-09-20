@@ -1,14 +1,14 @@
 import store from '~/store';
 import { cardStatus } from '~/enum/cardStatus';
 import { difficulties } from '~/enum/difficulty';
-import { setCards } from '~/store/reducers/game';
+import { addToMatch, setCards } from '~/store/reducers/game';
 import { shuffleArray } from '~/utils/array';
 import { socialCards } from './cardsController';
 
 function formatCards(cardImages) {
   return cardImages.map((item, index) => ({
     image: item,
-    status: cardStatus.SHOWED,
+    status: cardStatus.HID,
     id: index,
   }));
 }
@@ -34,8 +34,22 @@ export function startGame(difficulty) {
   store.dispatch(setCards(shuffleArray([...cards, ...cards])));
 }
 
-export function HideAllCards(cards) {
+export function showAllCards(cards) {
+  store.dispatch(
+    setCards(cards.map((item) => ({ ...item, status: cardStatus.SHOWED }))),
+  );
+}
+
+export function hideAllCards(cards) {
   store.dispatch(
     setCards(cards.map((item) => ({ ...item, status: cardStatus.HID }))),
   );
+}
+
+export function pressCard(index) {
+  const { cards, match } = store.getState().game;
+  const showed = cardStatus.SHOWED;
+  if (cards[index].status === showed) return;
+  if (match.length > 1) return;
+  store.dispatch(addToMatch({ index, card: cards[index] }));
 }
