@@ -8,21 +8,21 @@ export const ContainerOnlyText = styled(TouchableShadow)`
   border-radius: 8px;
   justify-content: center;
   align-items: center;
-  margin: 8px;
+  margin: 8px 0px;
   padding: 0px 8px;
 `;
 
 export const ContainerNormal = styled(ContainerOnlyText)`
   background: ${(p) =>
-    p.disabled ? p.theme.secondary1 : p.theme.colors[p.color]};
+    p.disabled ? p.theme.colors.secondary1 : p.theme.colors[p.color]};
 `;
 
 export const ContainerOutlined = styled(ContainerOnlyText)`
   border-width: 1px;
   border-color: ${(p) =>
-    p.disabled ? p.theme.secondary1 : p.theme.colors[p.color]};
+    p.disabled ? p.theme.colors.secondary1 : p.theme.colors[p.color]};
 `;
 
 export const StyledActivity = styled.ActivityIndicator.attrs((p) => ({
-  color: p.color ? p.theme[p.color] : `white`,
+  color: p.color ? p.theme.colors[p.color] : `white`,
 }))``;

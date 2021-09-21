@@ -10,11 +10,12 @@ const user = createSlice({
   initialState,
   reducers: {
     addUser: (state, action) => {
-      state.currentUser = action.payload.user;
-      state.user.push(action.payload.user);
+      const userWithId = { ...action.payload, id: state.users.length };
+      state.currentUser = userWithId;
+      state.users.push(userWithId);
     },
     selectUser: (state, action) => {
-      state.currentUser = action.payload.user;
+      state.currentUser = action.payload;
     },
     clear: () => initialState,
   },

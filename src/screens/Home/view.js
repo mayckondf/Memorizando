@@ -7,15 +7,16 @@ import UserSelector from '~/components/UserSelector';
 import { Container, ScrollContent } from './styles';
 import DifficultyCard from '~/components/DifficultyCard';
 import HomeScoreboard from '~/components/HomeScoreboard';
+import UserModal from '~/components/UserModal';
 
-const HomeView = ({ difficultyOptions }) => {
+const HomeView = ({ difficultyOptions, userModalRef, openUserSelector }) => {
   const safeArea = useSafeAreaInsets();
 
   return (
     <Container>
       <MemoStatusbar />
       <Header>
-        <UserSelector />
+        <UserSelector onPress={openUserSelector} />
       </Header>
       <ScrollContent safeArea={safeArea}>
         {difficultyOptions.map((item) => (
@@ -23,6 +24,7 @@ const HomeView = ({ difficultyOptions }) => {
         ))}
         <HomeScoreboard />
       </ScrollContent>
+      <UserModal modalRef={userModalRef} />
     </Container>
   );
 };

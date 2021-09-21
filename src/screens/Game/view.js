@@ -66,7 +66,6 @@ const GameView = ({
         rootStyle={{ elevation: 10 }}
         ref={modalRef}
         adjustToContentHeight
-        closable={false}
         closeOnTouchBackdrop={false}>
         <ModalContainer safeArea={safeArea}>
           <MemoText alignSelf guide="cardTitle" pVertical={16}>
