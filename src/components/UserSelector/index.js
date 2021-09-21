@@ -10,7 +10,11 @@ const UserSelector = ({ onPress }) => {
 
   return (
     <Container onPress={onPress}>
-      <MemoText color="white" guide="nameSelector" flex pHorizontal={16}>
+      <MemoText
+        color="textHighlight"
+        guide="nameSelector"
+        flex
+        pHorizontal={16}>
         {currentUser?.name}
       </MemoText>
       <ShowUsersButton>

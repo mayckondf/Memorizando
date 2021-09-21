@@ -14,13 +14,13 @@ export const ContainerOnlyText = styled(TouchableShadow)`
 
 export const ContainerNormal = styled(ContainerOnlyText)`
   background: ${(p) =>
-    p.disabled ? p.theme.colors.secondary1 : p.theme.colors[p.color]};
+    p.disabled ? p.theme.colors.disabled : p.theme.colors[p.color]};
 `;
 
 export const ContainerOutlined = styled(ContainerOnlyText)`
   border-width: 1px;
   border-color: ${(p) =>
-    p.disabled ? p.theme.colors.secondary1 : p.theme.colors[p.color]};
+    p.disabled ? p.theme.colors.disabled : p.theme.colors[p.color]};
 `;
 
 export const StyledActivity = styled.ActivityIndicator.attrs((p) => ({

@@ -1,18 +1,22 @@
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
-import TouchableShadow from '../TouchableShadow';
 
-export const Container = styled(TouchableShadow)`
-  min-height: 72px;
-  height: 72px;
-  background: ${(p) => p.theme.colors.primary2};
-  margin: 8px 16px;
-  border-radius: 8px;
-  padding: 10px;
-  flex-direction: row;
+export const Container = styled(TouchableOpacity)`
+  flex: 1;
+  background-color: ${(p) => p.theme.colors.background};
+  border-radius: 6px;
+  padding: 16px 0;
+  margin: 8px;
+  align-items: center;
   justify-content: center;
+`;
+
+export const IconView = styled.View`
+  padding: 8px 0;
 `;
 
 export const CardInfo = styled.View`
   flex: 1;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
 `;

@@ -4,7 +4,10 @@
     "REGION": "BR",
     "REGION_MASK": "pt-BR",
     "HOME": {
-      "WELCOME": "Bem-vindo"
+      "WELCOME": "Bem-vindo ao",
+      "GAME_TITLE": "Memorizando",
+      "LEADERBOARD": "Os melhores jogadores",
+      "PLAY_BUTTON": "Iniciar partida"
     },
     "DIFFICULT": {
       "LOW": "Fácil",
@@ -12,7 +15,7 @@
       "HARD": "Difícil"
     },
     "DIFFICULTY_CARD": {
-      "DESCRIPTION": "Dificuldade:"
+      "DESCRIPTION": "Selecione a dificuldade"
     },
     "SCOREBOARD": {
       "SCORE": "jogadas"

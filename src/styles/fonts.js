@@ -26,17 +26,37 @@ export const fontGuides = {
   },
   cardTitle: {
     size: 18,
-    fontFamily: 'Lato-Black',
-    weight: '900',
+    fontFamily: 'Lato-Bold',
+    weight: '700',
   },
   DifficultySelector: {
     size: 14,
     fontFamily: 'Lato',
-    weight: '400',
+    weight: '500',
   },
   PodiumPosition: {
     size: 24,
     fontFamily: 'Lato-Black',
     weight: '900',
+  },
+  WelcomeText: {
+    size: 22,
+    fontFamily: 'Lato-Bold',
+    weight: '400',
+  },
+  GameText: {
+    size: 36,
+    fontFamily: 'Lato-Black',
+    weight: '800',
+  },
+  PlayerPodium: {
+    size: 14,
+    fontFamily: 'Lato-Bold',
+    weight: '600',
+  },
+  PlaysCounter: {
+    size: 12,
+    fontFamily: 'Lato',
+    weight: '500',
   },
 };

@@ -34,12 +34,15 @@ const HomeScoreboard = () => {
 
   return (
     <Container>
+      <MemoText guide="cardTitle" color="textMedium">
+        {t('HOME.LEADERBOARD')}
+      </MemoText>
       <DifficultySelector>
         <LowDifficultyButton
           active={difficulty === difficulties.LOW}
           onPress={() => setDifficulty(difficulties.LOW)}>
           <MemoText
-            color={difficulty === difficulties.LOW ? 'white' : 'black'}
+            color={difficulty === difficulties.LOW ? 'white' : 'textMedium'}
             guide="DifficultySelector">
             {t(`DIFFICULT.${difficulties.LOW}`)}
           </MemoText>
@@ -48,7 +51,7 @@ const HomeScoreboard = () => {
           active={difficulty === difficulties.MEDIUM}
           onPress={() => setDifficulty(difficulties.MEDIUM)}>
           <MemoText
-            color={difficulty === difficulties.MEDIUM ? 'white' : 'black'}
+            color={difficulty === difficulties.MEDIUM ? 'white' : 'textMedium'}
             guide="DifficultySelector">
             {t(`DIFFICULT.${difficulties.MEDIUM}`)}
           </MemoText>
@@ -57,7 +60,7 @@ const HomeScoreboard = () => {
           active={difficulty === difficulties.HARD}
           onPress={() => setDifficulty(difficulties.HARD)}>
           <MemoText
-            color={difficulty === difficulties.HARD ? 'white' : 'black'}
+            color={difficulty === difficulties.HARD ? 'white' : 'textMedium'}
             guide="DifficultySelector">
             {t(`DIFFICULT.${difficulties.HARD}`)}
           </MemoText>
@@ -65,22 +68,27 @@ const HomeScoreboard = () => {
       </DifficultySelector>
       <PodiumContainer>
         <Podium heightPercent={40} color="podium2">
-          <Position guide="PodiumPosition">2</Position>
+          <Position guide="PodiumPosition">2º</Position>
         </Podium>
         <Podium heightPercent={60} color="podium1">
-          <Position guide="PodiumPosition">1</Position>
+          <Position guide="PodiumPosition">1º</Position>
         </Podium>
         <Podium heightPercent={30} color="podium3">
-          <Position guide="PodiumPosition">3</Position>
+          <Position guide="PodiumPosition">3º</Position>
         </Podium>
       </PodiumContainer>
       <PlayerContainer>
         {players.map((player, pos) => (
           <PlayerView key={`player:${pos}`}>
-            <MemoText>{player?.name || '-'}</MemoText>
-            <MemoText>{`${player?.score || 0} ${t(
-              'SCOREBOARD.SCORE',
-            )}`}</MemoText>
+            <MemoText
+              guide="PlayerPodium"
+              color="textHighlight"
+              numberOfLines={1}>
+              {player?.name || '-'}
+            </MemoText>
+            <MemoText guide="PlaysCounter" color="textMedium">
+              {`${player?.score || 0} ${t('SCOREBOARD.SCORE')}`}
+            </MemoText>
           </PlayerView>
         ))}
       </PlayerContainer>
