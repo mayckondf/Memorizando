@@ -6,7 +6,7 @@ const persistReducers = (reducers) => {
     {
       key: 'Memorize',
       storage: AsyncStorage,
-      whitelist: [],
+      whitelist: ['scoreboard', 'user'],
     },
     reducers,
   );
