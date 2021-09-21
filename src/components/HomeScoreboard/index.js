@@ -25,7 +25,11 @@ const HomeScoreboard = () => {
   const { scoreboard } = useSelector((state) => state);
 
   const getScoreBoardPosition = () => {
-    return [...scoreboard[difficulty], ...[{}, {}, {}]];
+    return [
+      ...([scoreboard[difficulty][1]] || [{}]),
+      ...([scoreboard[difficulty][0]] || [{}]),
+      ...([scoreboard[difficulty][2]] || [{}]),
+    ];
   };
 
   useEffect(() => {
@@ -84,7 +88,7 @@ const HomeScoreboard = () => {
               guide="PlayerPodium"
               color="textHighlight"
               numberOfLines={1}>
-              {player?.name || '-'}
+              {player?.user?.name || '-'}
             </MemoText>
             <MemoText guide="PlaysCounter" color="textMedium">
               {`${player?.score || 0} ${t('SCOREBOARD.SCORE')}`}

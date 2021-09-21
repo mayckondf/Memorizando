@@ -30,6 +30,11 @@ const GameView = ({
   const { t } = useTranslation();
   const navigation = useNavigation();
 
+  const backToHome = () => {
+    restartGame();
+    navigation.goBack();
+  };
+
   return (
     <Container>
       <MemoStatusbar />
@@ -72,7 +77,7 @@ const GameView = ({
             {t('GAME.WINNER', { plays })}
           </MemoText>
           <MemoButton onPress={restartGame}>{t('GAME.PLAY_AGAIN')}</MemoButton>
-          <MemoButton outlined onPress={() => navigation.goBack()}>
+          <MemoButton outlined onPress={backToHome}>
             {t('GAME.BACK_HOME')}
           </MemoButton>
         </ModalContainer>

@@ -6,10 +6,12 @@ import { clear, clearMatch, matchCards, sumPlays } from '~/store/reducers/game';
 import GameView from './view';
 import { cardStatus } from '~/enum/cardStatus';
 import { difficulties } from '~/enum/difficulty';
+import { registerScore } from '~/store/reducers/scoreboard';
 
 const Game = () => {
   const { params } = useRoute();
   const { cards, match, plays } = useSelector((state) => state.game);
+  const { currentUser } = useSelector((state) => state.user);
   const [timerToTurnAll, setTimerToTurnAll] = useState(null);
   const modalRef = useRef();
   const timeout = useRef();
@@ -26,6 +28,12 @@ const Game = () => {
 
   useEffect(() => {
     if (cards.every((item) => item.status === cardStatus.SHOWED) && plays > 0) {
+      dispatch(
+        registerScore({
+          difficulty: params.difficulty,
+          scoreboard: { user: currentUser, score: plays },
+        }),
+      );
       modalRef.current?.show();
     }
   }, [cards]);
